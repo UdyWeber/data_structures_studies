@@ -43,4 +43,20 @@ Big O is a way of comparing code efficiency mathematically
     to achieve the same problem, and it is very efficient not as O(1) efficient but is almost the same flat as it.
   - Some sorting algorithms like quick sort uses the O(n*log n) 
     that is not that efficient but is the most efficient for sorting algorithms
-  - 
+  - As we saw on `o_of_lists_example` lists objects have their own O notation defined by the methods we apply to them
+# WRAPPING UP KNOWLEDGE
+  - So we learn some different concepts about O notation, we know that O always goes to the worst case, 
+    in terms of efficiency we have different notations, O(n^2) is the most inefficient that we can have known as
+    loop within a loop, one that is proportionally efficient is O(n) cause if n is big we have a big amount of operations
+    in the most efficient section we have O(log n) known as divide and conquer is the most efficient by proportion
+    and to finish we have the most efficient that is O(1) that's going to perform only one operation constant.
+# BIG O COMPLEXITY CHART
+  - O(n!) - Horrible, you have to intentionally write bad code to achieve this
+  - O(2^n) - Horrible, mostly achieved when you have recursively problems that's solved using n
+  - O(n^2) - Horrible, mostly achieved when you have a loop within another loop
+  - O(n*log n) - Bad, most sorting algorithms perform this O notation
+  - O(n) - Fair, appear in problems that can grow in proportion to n
+  - O(log n) - Good, we achieve this result by dividing and conquering the n into smaller pieces
+  - O(1) - Excellent, appear when we constantly do 1 operation
+# DATASTRUCTS KNOWLEDGE WITH BIG O
+  - All data structures when talking about of space complexity are O(n) except for Skip List
