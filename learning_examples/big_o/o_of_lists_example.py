@@ -10,7 +10,7 @@ my_list.insert(1, "Hello World")
 # As we perform the insert method, we are pushing a value into the index 1 that's being occupied by 53
 # So as we have our new index 1 all the indexes that come after 1 will be updated it will be index + 1 for every
 # Item in the list that comes after the index 1, so it is considered O(n) n being the number of items
-# The same for the pop method when specified a index, it will remove tha value that's in the index and all the ones that
+# The same for the pop method when specified an index, it will remove tha value that's in the index and all the ones that
 # Come after it will be updated index - 1
 
 my_list.pop(4)
