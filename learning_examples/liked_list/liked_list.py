@@ -3,8 +3,11 @@ class Node:
         self.value = value
         self.next = None
 
+    # def __repr__(self):
+    #     return f"Node<value: {self.value}, next: {self.next}>"
+
     def __repr__(self):
-        return f"Node<value: {self.value}, next: {self.next}>"
+        return f"Node<value: {self.value}>"
 
 
 class LinkedList:
@@ -94,6 +97,8 @@ class LinkedList:
 
         if index == 0:
             return self.prepend(value=value)
+        elif index == self.length:
+            return self.append(value)
         else:
             node_before = self.get(index=index - 1)
 
@@ -126,6 +131,51 @@ class LinkedList:
             self.length -= 1
             return node_to_removed
 
+    def get(self, index: int) -> Node | None:
+        if self.length == 0 or index < 0 or index >= self.length:
+            return None
+
+        node_to_get = self.head
+        for _ in range(index):
+            node_to_get = node_to_get.next
+
+        return node_to_get
+
+    def set_value(self, index: int, value: int) -> bool:
+        node_to_set = self.get(index=index)
+
+        if not node_to_set:
+            return False
+
+        node_to_set.value = value
+        return True
+
+    def reverse(self):
+        """Reverses the values in the LinkedList"""
+        # This method is a bit tricky, so we are going to explain step by step
+        # First we need to reverse our head and tail and store the old head value
+        current_node = self.head
+        self.head = self.tail
+        self.tail = current_node
+
+        # Now we need to create our pivots to help knowing where we are on the linked list
+        before = None
+
+        # Now the iteration starts
+        while current_node is not None:
+            # Here we define the node that comes after the one we are iterating over
+            after = current_node.next
+
+            # Here we store the value of before flipping the pointer
+            # Pointer to the before value of the current in the item instead of the next
+            current_node.next = before
+
+            # Here we walk ahead on the list to continue iterating
+            before = current_node
+            current_node = after
+
+        return True
+
     def print_list(self) -> None:
         """Prints the list information, created for debugging purposes"""
         node = self.head
@@ -146,31 +196,11 @@ class LinkedList:
         print("Length: ", my_linked_list.length)
         print("=-=" * 10)
 
-    def get(self, index: int) -> Node | None:
-        if self.length == 0 or index < 0 or index >= self.length:
-            return None
-
-        node_to_get = self.head
-        for _ in range(index):
-            node_to_get = node_to_get.next
-
-        return node_to_get
-
-    def set_value(self, index: int, value: int) -> bool:
-        node_to_set = self.get(index=index)
-
-        if not node_to_set:
-            return False
-
-        node_to_set.value = value
-        return True
-
 
 if __name__ == "__main__":
     my_linked_list = LinkedList(1)
     my_linked_list.append(2)
     my_linked_list.append(3)
     my_linked_list.print_list()
-    my_linked_list.insert(index=2, value=19)
+    my_linked_list.reverse()
     my_linked_list.print_list()
-    # my_linked_list.print_list()

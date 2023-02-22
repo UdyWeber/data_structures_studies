@@ -207,7 +207,7 @@
       <workItem from="1677024179613" duration="35000" />
       <workItem from="1677024224568" duration="624000" />
       <workItem from="1677025056288" duration="11459000" />
-      <workItem from="1677076600407" duration="9513000" />
+      <workItem from="1677076600407" duration="15691000" />
     </task>
     <servers />
   </component>
@@ -219,16 +219,32 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/learning_examples/liked_list/liked_list.py</url>
-          <line>50</line>
+          <line>53</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/learning_examples/liked_list/liked_list.py</url>
-          <line>111</line>
+          <line>119</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/learning_examples/liked_list/liked_list.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/learning_examples/liked_list/liked_list.py</url>
+          <line>165</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.tail" language="Python" />
+        <watch expression="self.head" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/data_structures_studies$o_of_lists_example.coverage" NAME="o_of_lists_example Coverage Results" MODIFIED="1676417957645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/big_o" />
@@ -236,6 +252,6 @@
     <SUITE FILE_PATH="coverage/data_structures_studies$o_of_n_example.coverage" NAME="o_of_n_example Coverage Results" MODIFIED="1676033395035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/big_o" />
     <SUITE FILE_PATH="coverage/data_structures_studies$dictionary_pointers_example.coverage" NAME="dictionary_pointers_example Coverage Results" MODIFIED="1676423714597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/classes_and_pointers" />
     <SUITE FILE_PATH="coverage/data_structures_studies$class.coverage" NAME="class Coverage Results" MODIFIED="1676420467360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/classes_and_pointers" />
-    <SUITE FILE_PATH="coverage/data_structures_studies$liked_list.coverage" NAME="liked_list Coverage Results" MODIFIED="1677087277907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/liked_list" />
+    <SUITE FILE_PATH="coverage/data_structures_studies$liked_list.coverage" NAME="liked_list Coverage Results" MODIFIED="1677093299479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/liked_list" />
   </component>
 </project>
