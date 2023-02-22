@@ -87,19 +87,44 @@ class LinkedList:
         self.tail = None
         self.length = 0
 
-    def insert(self, index: int, value: int) -> None:
-        # Create a new node iterate the list to the index and add new node to it
-        # TODO: Fix this method latter on
-        new_node = Node(value=value)
-        node = self.head
+    def insert(self, index: int, value: int) -> bool:
+        """Create a new node iterate the list to the index and add new node to it"""
+        if index < 0 or index > self.length:
+            return False
 
-        for _ in range(index):
-            node = node.next
+        if index == 0:
+            return self.prepend(value=value)
+        else:
+            node_before = self.get(index=index - 1)
 
-        new_node.next = node.next
-        node.next = new_node
+            if not node_before:
+                return False
 
-        self.length += 1
+            new_node = Node(value=value)
+
+            new_node.next = node_before.next
+            node_before.next = new_node
+
+            self.length += 1
+            return True
+
+    def remove(self, index: int) -> Node | None:
+        if index < 0 or index >= self.length:
+            return None
+
+        if index == 0:
+            return self.pop_first()
+        if index == self.length - 1:
+            return self.pop()
+        else:
+            node_before = self.get(index=index - 1)
+            node_to_removed = node_before.next
+
+            node_before.next = node_to_removed.next
+            node_to_removed.next = None
+
+            self.length -= 1
+            return node_to_removed
 
     def print_list(self) -> None:
         """Prints the list information, created for debugging purposes"""
@@ -116,8 +141,8 @@ class LinkedList:
             item_index += 1
 
         print("=-="*10)
-        print("Tail: ", my_linked_list.tail.value)
         print("Head: ", my_linked_list.head.value)
+        print("Tail: ", my_linked_list.tail.value)
         print("Length: ", my_linked_list.length)
         print("=-=" * 10)
 
@@ -144,8 +169,8 @@ class LinkedList:
 if __name__ == "__main__":
     my_linked_list = LinkedList(1)
     my_linked_list.append(2)
-    my_linked_list.append(95)
-    my_linked_list.prepend(194)
-    my_linked_list.append(44)
-    my_linked_list.set_value(index=0, value=185)
+    my_linked_list.append(3)
     my_linked_list.print_list()
+    my_linked_list.insert(index=2, value=19)
+    my_linked_list.print_list()
+    # my_linked_list.print_list()
