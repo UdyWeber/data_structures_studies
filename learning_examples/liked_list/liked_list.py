@@ -8,9 +8,7 @@ class Node:
 
 
 class LinkedList:
-    def __init__(self, value=None):
-        # create a new Node
-
+    def __init__(self, value: int = None):
         if value is not None:
             new_node = Node(value=value)
 
@@ -22,8 +20,8 @@ class LinkedList:
             self.tail = None
             self.length = 0
 
-    def append(self, value):
-        # Create a new node and add to the end
+    def append(self, value: int) -> bool:
+        """Add a value at the end of the list"""
         new_node = Node(value=value)
 
         if self.length == 0:
@@ -34,9 +32,10 @@ class LinkedList:
             self.tail = new_node
 
         self.length += 1
+        return True
 
-    def prepend(self, value):
-        # Create a new node and add to the beginning
+    def prepend(self, value: int) -> bool:
+        """Add a value to the front of the list"""
         new_node = Node(value=value)
 
         if self.length == 0:
@@ -47,9 +46,50 @@ class LinkedList:
             self.head = new_node
 
         self.length += 1
+        return True
 
-    def insert(self, index: int, value,):
+    def pop(self) -> Node | None:
+        """Remove and returns the last node in the list"""
+        node_to_pop = self.tail
+
+        if self.length == 1:
+            self.make_empty()
+        elif self.length > 1:
+            penultimate = self.head
+
+            while penultimate.next.next is not None:
+                penultimate = penultimate.next
+
+            self.tail = penultimate
+            self.tail.next = None
+            self.length -= 1
+
+        return node_to_pop
+
+    def pop_first(self) -> Node | None:
+        """Remove and returns the first node in the list"""
+        node_to_pop = self.head
+
+        if self.length == 1:
+            self.make_empty()
+        elif self.length > 1:
+            new_head = self.head.next
+
+            self.head.next = None
+            self.head = new_head
+            self.length -= 1
+
+        return node_to_pop
+
+    def make_empty(self) -> None:
+        """Empty's the list"""
+        self.head = None
+        self.tail = None
+        self.length = 0
+
+    def insert(self, index: int, value: int) -> None:
         # Create a new node iterate the list to the index and add new node to it
+        # TODO: Fix this method latter on
         new_node = Node(value=value)
         node = self.head
 
@@ -61,21 +101,51 @@ class LinkedList:
 
         self.length += 1
 
-    def print_list(self):
+    def print_list(self) -> None:
+        """Prints the list information, created for debugging purposes"""
         node = self.head
 
+        if self.length == 0:
+            return None
+
+        item_index = 0
+        print("=-=" * 10)
         while node is not None:
-            print(node.value)
+            print(f"Index {item_index}: {node.value}")
             node = node.next
+            item_index += 1
+
+        print("=-="*10)
+        print("Tail: ", my_linked_list.tail.value)
+        print("Head: ", my_linked_list.head.value)
+        print("Length: ", my_linked_list.length)
+        print("=-=" * 10)
+
+    def get(self, index: int) -> Node | None:
+        if self.length == 0 or index < 0 or index >= self.length:
+            return None
+
+        node_to_get = self.head
+        for _ in range(index):
+            node_to_get = node_to_get.next
+
+        return node_to_get
+
+    def set_value(self, index: int, value: int) -> bool:
+        node_to_set = self.get(index=index)
+
+        if not node_to_set:
+            return False
+
+        node_to_set.value = value
+        return True
 
 
-my_linked_list = LinkedList(3)
-my_linked_list.append(95)
-my_linked_list.prepend(194)
-my_linked_list.insert(value=123, index=1)
-
-print("Tail: ", my_linked_list.tail.value)
-print("Head: ", my_linked_list.head.value)
-print("Length: ", my_linked_list.length)
-
-my_linked_list.print_list()
+if __name__ == "__main__":
+    my_linked_list = LinkedList(1)
+    my_linked_list.append(2)
+    my_linked_list.append(95)
+    my_linked_list.prepend(194)
+    my_linked_list.append(44)
+    my_linked_list.set_value(index=0, value=185)
+    my_linked_list.print_list()
