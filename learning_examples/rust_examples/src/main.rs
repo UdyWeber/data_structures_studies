@@ -7,23 +7,13 @@ struct Node {
 
 struct LinkedList {
     head: Option<Box<Node>>,
-    tail: Option<Box<Node>>,
     length: i64
 }
 
 impl LinkedList {
-    fn new(value: i64) -> Self {
-        let new_node = Node { 
-            value: value,
-            next: None
-        };
-
-        let boxed_node = Box::new(new_node);
-        let cloned_boxed_node = boxed_node.clone();
-
+    fn new() -> Self {
         Self {
-            head: Some(boxed_node),
-            tail: Some(cloned_boxed_node),
+            head: None,
             length: 1
         }
     }
@@ -40,25 +30,27 @@ impl LinkedList {
 
 
     fn append(&mut self, value: i64) {
-        let new_node = Node { 
+        let new_node = Some(Box::new(Node {
             value: value,
             next: None
-        };
+        }));
 
-        let boxed_node = Some(Box::new(new_node));
+        let mut out_node = &mut self.head;
 
-        if let Some(mut last_node) = self.tail.as_mut(){
-            last_node.next = boxed_node.clone();
-            self.tail = boxed_node;
+        while let Some(node) = out_node {
+            out_node = &mut node.next;
         }
 
+        *out_node = new_node;
         self.length += 1;
     }
 }
 
 
 fn main() {
-    let mut linked_list = LinkedList::new(56);
+    let mut linked_list = LinkedList::new();
     linked_list.append(5123);
+    linked_list.append(2310);
+    linked_list.append(53);
     linked_list.print_list_items();
 }
