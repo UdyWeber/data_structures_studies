@@ -3,9 +3,6 @@ class Node:
         self.value = value
         self.next = None
 
-    # def __repr__(self):
-    #     return f"Node<value: {self.value}, next: {self.next}>"
-
     def __repr__(self):
         return f"Node<value: {self.value}>"
 
@@ -191,16 +188,29 @@ class LinkedList:
             item_index += 1
 
         print("=-="*10)
-        print("Head: ", my_linked_list.head.value)
-        print("Tail: ", my_linked_list.tail.value)
-        print("Length: ", my_linked_list.length)
+        print("Head: ", self.head.value)
+        print("Tail: ", self.tail.value)
+        print("Length: ", self.length)
         print("=-=" * 10)
+
+    def find_middle_by_length(self):
+        index = self.length // 2
+
+        node = self.get(index=index)
+        return node
+
+    def find_middle_node(self):
+        fast = self.head
+        slow = self.head
+
+        while fast is not None and fast.next is not None:
+            fast = fast.next.next
+            slow = slow.next
+
+        return slow
 
 
 if __name__ == "__main__":
     my_linked_list = LinkedList(1)
     my_linked_list.append(2)
     my_linked_list.append(3)
-    my_linked_list.print_list()
-    my_linked_list.reverse()
-    my_linked_list.print_list()
