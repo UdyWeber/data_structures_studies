@@ -84,7 +84,7 @@ class DoublyLinkedList:
         self.length -= 1
         return last_head
 
-    def get(self, index: int):
+    def get(self, index: int) -> Node | None:
         if self.length == 0 or index >= self.length:
             return None
 
@@ -134,6 +134,46 @@ class DoublyLinkedList:
         self.length += 1
         return True
 
+    def swap_first_last(self):
+        if self.head == self.tail or self.head is None:
+            return
+
+        self.head.value, self.tail.value = self.tail.value, self.head.value
+
+    def remove(self, index: int):
+        if index < 0 or index >= self.length:
+            return None
+
+        if index == 0:
+            return self.pop_first()
+        elif index == self.length - 1:
+            return self.pop()
+        else:
+            node_to_remove = self.get(index)
+
+            before = node_to_remove.prev
+            before.next = node_to_remove.next
+            node_to_remove.next.prev = before
+
+            self.length -= 1
+            return node_to_remove
+
+    def reverse(self):
+        # We have to set our current to the head of the list
+        current = self.head
+
+        while current is not None:
+            # As you're willing to walk back on the list, you might notice that you have to invert your path
+            # So every time we have to swap the prev and next values in order to achieve the right path to follow
+            current.next, current.prev = current.prev, current.next
+
+            # Always moving back on the list
+            current = current.prev
+
+        # Have you swapped the pointers path, now head.next is None, so in order to move forward in the list
+        # You have to set head as tail cause tail.next is not None and it points to the inverted Path list
+        self.tail, self.head = self.head, self.tail
+
     def print_list(self) -> None:
         """Prints the list information, created for debugging purposes"""
         node = self.head
@@ -156,8 +196,9 @@ class DoublyLinkedList:
 
 
 if __name__ == "__main__":
-    doubly_linked_list = DoublyLinkedList(6)
+    doubly_linked_list = DoublyLinkedList(1)
+    doubly_linked_list.append(2)
     doubly_linked_list.append(3)
-    doubly_linked_list.append(1)
-    doubly_linked_list.insert(index=-5, value=8)
+    doubly_linked_list.append(4)
+    doubly_linked_list.reverse()
     doubly_linked_list.print_list()

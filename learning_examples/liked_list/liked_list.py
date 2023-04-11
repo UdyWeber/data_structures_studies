@@ -116,7 +116,7 @@ class LinkedList:
 
         if index == 0:
             return self.pop_first()
-        if index == self.length - 1:
+        elif index == self.length - 1:
             return self.pop()
         else:
             node_before = self.get(index=index - 1)
