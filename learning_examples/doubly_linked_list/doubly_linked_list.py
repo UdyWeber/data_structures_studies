@@ -171,7 +171,7 @@ class DoublyLinkedList:
             current = current.prev
 
         # Have you swapped the pointers path, now head.next is None, so in order to move forward in the list
-        # You have to set head as tail cause tail.next is not None and it points to the inverted Path list
+        # You have to set head as tail cause tail.next is not None, and it points to the inverted Path list
         self.tail, self.head = self.head, self.tail
 
     def print_list(self) -> None:
