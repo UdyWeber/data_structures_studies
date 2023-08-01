@@ -62,9 +62,91 @@ class Stack:
         print("=-=" * 10)
 
 
+class ListStack:
+    def __init__(self, value: int | str = None):
+        if value is None:
+            self.stack_list = []
+        else:
+            self.stack_list = [value]
+
+    def push(self, value: int | str):
+        self.stack_list.append(value)
+
+    def pop(self) -> int | str | None:
+        if not self.stack_list:
+            return None
+
+        return self.stack_list.pop()
+
+    def peek(self):
+        if self.is_empty():
+            return None
+        else:
+            return self.stack_list[-1]
+
+    def size(self):
+        return len(self.stack_list)
+
+    def is_empty(self):
+        return self.size() == 0
+
+    def print_stack(self):
+        for node in self.stack_list:
+            print(node)
+
+        print(f"Height: {len(self.stack_list)}")
+
+
+def is_balanced_parentheses(string_with_parentheses: str) -> bool:
+    my_stack = ListStack()
+
+    for char in string_with_parentheses:
+        if char == "(":
+            my_stack.push(char)
+        elif char == ")":
+            if my_stack.is_empty() or my_stack.pop() != "(":
+                return False
+
+    return my_stack.is_empty()
+
+
+def reverse_string(string_to_reverse: str) -> str:
+    my_stack = ListStack()
+
+    for char in string_to_reverse:
+        my_stack.push(char)
+
+    reversed_string = ""
+
+    while not my_stack.is_empty():
+        reversed_string += my_stack.pop()
+
+    return reversed_string
+
+
+def sort_stack(input_stack: ListStack):
+    sorted_stack = ListStack()
+
+    while not input_stack.is_empty():
+        temp = input_stack.pop()
+
+        while not sorted_stack.is_empty() and sorted_stack.peek() > temp:
+            input_stack.push(sorted_stack.pop())
+
+        sorted_stack.push(temp)
+
+    while not sorted_stack.is_empty():
+        input_stack.push(sorted_stack.pop())
+
+
 if __name__ == "__main__":
-    stack = Stack(23)
-    stack.push(25)
-    print(stack.pop())
-    stack.push(33)
-    stack.print_stack()
+    my_stack = ListStack()
+    my_stack.push(3)
+    my_stack.push(1)
+    my_stack.push(5)
+    my_stack.push(4)
+    my_stack.push(2)
+
+    my_stack.print_stack()
+    sort_stack(my_stack)
+    my_stack.print_stack()

@@ -5,3 +5,5 @@
     then we have to reindex all the other items that were in the stack
   - When building a stack you have to think of it as a linked list but vertically instead of horizontally, so you're adding
     items in the top where it is accessible and removing only from the top
+  - Its always common to build a stack within a list
+  - Pushing into the stack is O(1) cause you're piling things
