@@ -104,4 +104,4 @@ if __name__ == "__main__":
     queue.enqueue(420)
     queue.enqueue(69)
     queue.print_list()
-    print("Tirado da list{queue.dequeue()}")
+    print(f"Tirado da lista: {queue.dequeue()}")
