@@ -43,6 +43,19 @@ class BinarySearchTree:
 
         return True
 
+    def contains(self, value) -> bool:
+        temp = self.root
+
+        while temp is not None:
+            if value > temp.value:
+                temp = temp.right
+            elif value < temp.value:
+                temp = temp.left
+            else:
+                return True
+
+        return False
+
 
 if __name__ == "__main__":
     tree = BinarySearchTree()
@@ -53,4 +66,6 @@ if __name__ == "__main__":
     tree.insert(596)
     tree.insert(18)
     tree.insert(130)
+
+    print(tree.contains(18))
     print(tree)
