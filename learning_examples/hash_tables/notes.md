@@ -31,3 +31,13 @@
     ## Linear Probing
     -  Is another way of handling collisions, but in this example, if 2 hashes point to the same address we will just
        put the colliding address further in the list where it is an empty space.
+
+## Big O
+- The hash function that we use to calculate the hash value of the given key would everytime do the same operation so
+  being O(1)
+- Appending a new value to the hashtable is O(1) to cause we don't have to iterate through the hashtable data collection
+  to append the value to the tail of the list of the given index.
+- The get method tho is a little bit more debatable, to find the index in the data set is O(1) but depending on the
+  distribution of items based on the hash function randomness we can have large lists of keys in the same index so in
+  worst case scenario it would be, O(n), but as we know, with larger size on the table we can distribute the keys even
+  better, so it's not that likely to happen.
