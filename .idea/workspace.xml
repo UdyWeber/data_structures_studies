@@ -7,7 +7,12 @@
     <cargoProject FILE="$PROJECT_DIR$/learning_examples/rust_examples/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97460daa-60ef-4bda-9fd8-8894609c54ca" name="Changes" comment="" />
+    <list default="true" id="97460daa-60ef-4bda-9fd8-8894609c54ca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/learning_examples/graph/notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_examples/hash_tables/hash_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning_examples/hash_tables/hash_table.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -232,6 +237,7 @@
       <workItem from="1691094160434" duration="6000" />
       <workItem from="1691148901633" duration="184000" />
       <workItem from="1695838006783" duration="8397000" />
+      <workItem from="1696877303057" duration="4583000" />
     </task>
     <servers />
   </component>
@@ -291,7 +297,7 @@
     <SUITE FILE_PATH="coverage/data_structures_studies$class.coverage" NAME="class Coverage Results" MODIFIED="1676420467360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/classes_and_pointers" />
     <SUITE FILE_PATH="coverage/data_structures_studies$o_of_lists_example.coverage" NAME="o_of_lists_example Coverage Results" MODIFIED="1676417957645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/big_o" />
     <SUITE FILE_PATH="coverage/data_structures_studies$liked_list.coverage" NAME="liked_list Coverage Results" MODIFIED="1677158704246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/liked_list" />
-    <SUITE FILE_PATH="coverage/data_structures_studies$hash_table.coverage" NAME="hash_table Coverage Results" MODIFIED="1695847079457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/hash_tables" />
+    <SUITE FILE_PATH="coverage/data_structures_studies$hash_table.coverage" NAME="hash_table Coverage Results" MODIFIED="1696877710296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/hash_tables" />
     <SUITE FILE_PATH="coverage/data_structures_studies$tree.coverage" NAME="tree Coverage Results" MODIFIED="1695839148366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/trees" />
     <SUITE FILE_PATH="coverage/data_structures_studies$three.coverage" NAME="three Coverage Results" MODIFIED="1690860420017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/threes" />
     <SUITE FILE_PATH="coverage/data_structures_studies$dictionary_pointers_example.coverage" NAME="dictionary_pointers_example Coverage Results" MODIFIED="1676423714597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/classes_and_pointers" />

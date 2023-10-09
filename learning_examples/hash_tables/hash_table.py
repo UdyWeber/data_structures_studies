@@ -99,3 +99,6 @@ if __name__ == '__main__':
     print(f"Value for djabo: {h.get_item('djabo')}")
     print(f"Value for djamba: {h.get_item('djamba')}")
 
+    for k, v in h.items():
+        print(f"Key {k}: {v}")
+
