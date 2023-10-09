@@ -127,7 +127,79 @@ def subarray_sum(nums: list[int], target: int) -> list[int]:
     return []
 
 
+# Without using the set() function
+def remove_duplicates(nums: list[int]) -> list[int]:
+    uniques = {}
+
+    for num in nums:
+        if num in uniques:
+            continue
+        else:
+            uniques[num] = None
+
+    return list(uniques.keys())
+
+
+# Using the set() function
+def remove_duplicates_with_set(nums: list[int]) -> list[int]:
+    return list(set(nums))
+
+
+def has_unique_chars(string: str):
+    char_set = set()
+
+    for char in string:
+        if char in char_set:
+            return False
+        char_set.add(char)
+
+    return True
+
+
+def find_pairs(list1: list[int], list2: list[int], target: int) -> list[tuple[int, int]]:
+    possible_matchs = set(list1)
+    pairs = []
+
+    for j in list2:
+        diff = target - j
+
+        if diff in possible_matchs:
+            pairs.append((diff, j))
+
+    return pairs
+
+
+# Needed Example to complete understand
+# Without example 8 of 9 tests passed
+def longest_consecutive_sequence(nums: list[int]):
+    longest_sequence = 0
+    nums_set = set(nums)
+
+    for num in nums:
+        # Means that the num we are in is the start of a sequence
+        if num - 1 not in nums_set:
+            current_sequence = 1
+
+            # Need to do this because we will iterate using the number and updating it
+            current_num = num
+
+            while current_num + 1 in nums_set:
+                current_sequence += 1
+                current_num += + 1
+
+            if current_sequence > longest_sequence:
+                longest_sequence = current_sequence
+
+    return longest_sequence
+
+
 if __name__ == '__main__':
+    print(longest_consecutive_sequence([100, 4, 200, 1, 3, 2]))
+
+    print(find_pairs([1, 2, 3, 4, 5], [2, 4, 6, 8, 10], 7))
+
+    print(has_unique_chars('abcLd#efg'))
+
     print(first_non_repeating_char("leetcode"))
     print(first_non_repeating_char('hello'))
     print(first_non_repeating_char('aabbcc'))
