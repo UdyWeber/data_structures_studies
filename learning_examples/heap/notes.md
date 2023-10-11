@@ -14,3 +14,7 @@
 - To search for the parent of a given child we are only going to divide it by 2
 - To insert a value into a heap we first append it to the list, and then we analyze if it is a valid heap if it isn't we
   compare and move the values till the tree follows the rule of the parents being greater or equal than it's children
+- Doing an insert or remove on a heap is O(log n)
+- A priority Queue can be implemented using BinarySearchTrees or LinkedLists, but we use a heap to implement it more often
+  because to search for the highest priority in a linked list and an unbalanced BST are both O(n), making implementing it
+  on a heap more efficient, because on Max Heap the max priority item is always at the top.

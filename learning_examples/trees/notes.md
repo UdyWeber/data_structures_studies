@@ -22,3 +22,10 @@
     - The worst case would be if we had a tree that only goes in one way so that's no dividing we are essentially going 
       through a linked list so the search is O(n) instead of O(log n)
     - All operations of a binary search tree we consider O(log n)
+
+# Recursive methods
+- We basically want to give to each recursion the pointer to the next node on the tree and update or insert values in it
+- For deleting is simple but complicated, we have to be able to transverse the tree to find our node, then we drop the
+  node from the tree, but just if it's a leaf node, if it's a parent node we have to put up the leaf that node was holding,
+  and it gets more complicated when the leaf are holding two subtrees, then we have to go the right one and find the lower
+  value that we can copy tho the node we are trying to drop and complete the tree again by dropping the lower value at the end.

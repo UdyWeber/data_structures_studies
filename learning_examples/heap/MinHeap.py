@@ -1,4 +1,4 @@
-class MaxHeap:
+class MinHeap:
     def __init__(self):
         self.heap = []
 
@@ -15,7 +15,7 @@ class MaxHeap:
         self.heap[index1], self.heap[index2] = self.heap[index2], self.heap[index1]
 
     def _sink_down(self, index):
-        max_index = index
+        min_index = index
 
         while True:
             left_index = self._left_child(index)
@@ -23,16 +23,16 @@ class MaxHeap:
 
             # We have to make those if statements separately because the value must be put in the right order
             # We have to first check if the index exists in the list range
-            if (left_index < len(self.heap)) and self.heap[left_index] > self.heap[max_index]:
-                max_index = left_index
+            if (left_index < len(self.heap)) and self.heap[left_index] < self.heap[min_index]:
+                min_index = left_index
 
-            if (right_index < len(self.heap)) and self.heap[right_index] > self.heap[max_index]:
-                max_index = right_index
+            if (right_index < len(self.heap)) and self.heap[right_index] < self.heap[min_index]:
+                min_index = right_index
 
-            # When the max index is reached it means we have to stop iterating cause all the values are correctly put
-            if max_index != index:
-                self._swap(max_index, index)
-                index = max_index
+            # When the min index is reached it means we have to stop iterating cause all the values are correctly put
+            if min_index != index:
+                self._swap(min_index, index)
+                index = min_index
             else:
                 return
 
@@ -40,7 +40,7 @@ class MaxHeap:
         self.heap.append(value)
         index_of_value = len(self.heap) - 1
 
-        while index_of_value > 0 and self.heap[index_of_value] > self.heap[self._parent(index_of_value)]:
+        while index_of_value > 0 and self.heap[index_of_value] < self.heap[self._parent(index_of_value)]:
             parent_index = self._parent(index_of_value)
 
             self._swap(index_of_value, parent_index)
@@ -49,7 +49,6 @@ class MaxHeap:
     def remove(self):
         if not self.heap:
             return None
-
         elif len(self.heap) == 1:
             return self.heap.pop()
 
@@ -76,7 +75,7 @@ class MaxHeap:
 
 
 if __name__ == "__main__":
-    mh = MaxHeap()
+    mh = MinHeap()
     mh.insert(23)
     mh.insert(123)
     mh.insert(12)
@@ -91,6 +90,6 @@ if __name__ == "__main__":
 
     mh.remove()
 
-    assert mh.heap[0] == max(mh.heap)
+    assert mh.heap[0] == min(mh.heap)
 
     mh.print_heap()
