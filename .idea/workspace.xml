@@ -8,9 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97460daa-60ef-4bda-9fd8-8894609c54ca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/learning_examples/graph/graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning_examples/heap/MaxHeap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning_examples/heap/notes.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning_examples/rust_examples/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/learning_examples/rust_examples/target/.rustc_info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,29 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Python.graph">
+  <component name="RunManager" selected="Python.MaxHeap">
+    <configuration name="MaxHeap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="data_structures_studies" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning_examples/heap" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_examples/heap/MaxHeap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="graph" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="data_structures_studies" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,28 +157,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="queue" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="data_structures_studies" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning_examples/queue" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_examples/queue/queue.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="scratch_91" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="data_structures_studies" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -203,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.MaxHeap" />
         <item itemvalue="Python.graph" />
         <item itemvalue="Python.scratch_91" />
         <item itemvalue="Python.hash_table" />
         <item itemvalue="Python.tree" />
-        <item itemvalue="Python.queue" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +242,7 @@
       <workItem from="1691148901633" duration="184000" />
       <workItem from="1695838006783" duration="8397000" />
       <workItem from="1696877303057" duration="4583000" />
-      <workItem from="1696967890819" duration="3913000" />
+      <workItem from="1696967890819" duration="8292000" />
     </task>
     <servers />
   </component>
@@ -293,9 +293,15 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/learning_examples/graph/graph.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="27" />
+          <condition expression="value == 1000" language="Python" />
+          <url>file://$PROJECT_DIR$/learning_examples/heap/MaxHeap.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/learning_examples/heap/MaxHeap.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -303,10 +309,12 @@
       <configuration name="PythonConfigurationType">
         <watch expression="self.stack1" language="Python" />
         <watch expression="self.stack2" language="Python" />
+        <watch expression="self.heap" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/data_structures_studies$MaxHeap.coverage" NAME="MaxHeap Coverage Results" MODIFIED="1696994866066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/heap" />
     <SUITE FILE_PATH="coverage/data_structures_studies$pointers.coverage" NAME="pointers Coverage Results" MODIFIED="1676422689669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/classes_and_pointers" />
     <SUITE FILE_PATH="coverage/data_structures_studies$liked_list.coverage" NAME="liked_list Coverage Results" MODIFIED="1677158704246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/liked_list" />
     <SUITE FILE_PATH="coverage/data_structures_studies$hash_table.coverage" NAME="hash_table Coverage Results" MODIFIED="1696877710296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/hash_tables" />
@@ -320,6 +328,6 @@
     <SUITE FILE_PATH="coverage/data_structures_studies$queue.coverage" NAME="queue Coverage Results" MODIFIED="1691094109317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/queue" />
     <SUITE FILE_PATH="coverage/data_structures_studies$class.coverage" NAME="class Coverage Results" MODIFIED="1676420467360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/classes_and_pointers" />
     <SUITE FILE_PATH="coverage/data_structures_studies$o_of_lists_example.coverage" NAME="o_of_lists_example Coverage Results" MODIFIED="1676417957645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/big_o" />
-    <SUITE FILE_PATH="coverage/data_structures_studies$graph.coverage" NAME="graph Coverage Results" MODIFIED="1696990475817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/graph" />
+    <SUITE FILE_PATH="coverage/data_structures_studies$graph.coverage" NAME="graph Coverage Results" MODIFIED="1696990599124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/graph" />
   </component>
 </project>
