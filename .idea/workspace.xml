@@ -8,11 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97460daa-60ef-4bda-9fd8-8894609c54ca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/learning_examples/sorting_algorithms/bubble_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning_examples/sorting_algorithms/insertion_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning_examples/sorting_algorithms/notes.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning_examples/sorting_algorithms/selection_sort.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning_examples/rust_examples/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/learning_examples/rust_examples/target/.rustc_info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning_examples/trees/binary_search_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning_examples/trees/binary_search_tree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning_examples/trees/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/learning_examples/trees/notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning_examples/trees/recursive_binary_search_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning_examples/trees/recursive_binary_search_tree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning_examples/liked_list/liked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning_examples/liked_list/liked_list.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,29 +71,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Python.binary_search_tree">
-    <configuration name="MinHeap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="data_structures_studies" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning_examples/heap" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_examples/heap/MinHeap.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.liked_list">
     <configuration name="binary_search_tree" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="data_structures_studies" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -115,7 +94,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="examples" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="bubble_sort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="data_structures_studies" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -123,12 +102,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning_examples/recursion" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning_examples/sorting_algorithms" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_examples/recursion/examples.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_examples/sorting_algorithms/bubble_sort.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,7 +116,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="leet_code_tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="insertion_sort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="data_structures_studies" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -145,12 +124,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning_examples/heap" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning_examples/sorting_algorithms" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_examples/heap/leet_code_tests.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_examples/sorting_algorithms/insertion_sort.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="liked_list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="data_structures_studies" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning_examples/liked_list" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_examples/liked_list/liked_list.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,7 +182,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="recursive_binary_search_tree" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="selection_sort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="data_structures_studies" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -189,12 +190,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning_examples/trees" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning_examples/sorting_algorithms" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_examples/trees/recursive_binary_search_tree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_examples/sorting_algorithms/selection_sort.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -205,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.liked_list" />
+        <item itemvalue="Python.insertion_sort" />
+        <item itemvalue="Python.selection_sort" />
+        <item itemvalue="Python.bubble_sort" />
         <item itemvalue="Python.binary_search_tree" />
-        <item itemvalue="Python.recursive_binary_search_tree" />
-        <item itemvalue="Python.examples" />
-        <item itemvalue="Python.leet_code_tests" />
-        <item itemvalue="Python.MinHeap" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +249,7 @@
       <workItem from="1697036028959" duration="581000" />
       <workItem from="1697037991011" duration="5117000" />
       <workItem from="1697044477564" duration="8718000" />
-      <workItem from="1697557722367" duration="6054000" />
+      <workItem from="1697557722367" duration="16114000" />
     </task>
     <servers />
   </component>
@@ -318,11 +319,33 @@
           <line>121</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/learning_examples/sorting_algorithms/bubble_sort.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/learning_examples/sorting_algorithms/selection_sort.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/learning_examples/sorting_algorithms/insertion_sort.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/learning_examples/liked_list/liked_list.py</url>
+          <line>219</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="mh.heap" language="Python" />
+        <watch expression="list_to_sort[min_index]" language="Python" />
+        <watch expression="self.print_list()" language="Python" />
       </configuration>
     </watches-manager>
   </component>
@@ -330,22 +353,25 @@
     <SUITE FILE_PATH="coverage/data_structures_studies$MaxHeap.coverage" NAME="MaxHeap Coverage Results" MODIFIED="1697041807468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/heap" />
     <SUITE FILE_PATH="coverage/data_structures_studies$pointers.coverage" NAME="pointers Coverage Results" MODIFIED="1676422689669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/classes_and_pointers" />
     <SUITE FILE_PATH="coverage/data_structures_studies$examples.coverage" NAME="examples Coverage Results" MODIFIED="1697048846324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/recursion" />
-    <SUITE FILE_PATH="coverage/data_structures_studies$liked_list.coverage" NAME="liked_list Coverage Results" MODIFIED="1677158704246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/liked_list" />
     <SUITE FILE_PATH="coverage/data_structures_studies$hash_table.coverage" NAME="hash_table Coverage Results" MODIFIED="1696877710296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/hash_tables" />
+    <SUITE FILE_PATH="coverage/data_structures_studies$liked_list.coverage" NAME="liked_list Coverage Results" MODIFIED="1697573832362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/liked_list" />
     <SUITE FILE_PATH="coverage/data_structures_studies$tree.coverage" NAME="tree Coverage Results" MODIFIED="1695839148366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/trees" />
     <SUITE FILE_PATH="coverage/data_structures_studies$MinHeap.coverage" NAME="MinHeap Coverage Results" MODIFIED="1697041960699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/heap" />
     <SUITE FILE_PATH="coverage/data_structures_studies$three.coverage" NAME="three Coverage Results" MODIFIED="1690860420017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/threes" />
     <SUITE FILE_PATH="coverage/data_structures_studies$dictionary_pointers_example.coverage" NAME="dictionary_pointers_example Coverage Results" MODIFIED="1676423714597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/classes_and_pointers" />
+    <SUITE FILE_PATH="coverage/data_structures_studies$insertion_sort.coverage" NAME="insertion_sort Coverage Results" MODIFIED="1697568536652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/sorting_algorithms" />
     <SUITE FILE_PATH="coverage/data_structures_studies$stack.coverage" NAME="stack Coverage Results" MODIFIED="1690856970050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/stack" />
     <SUITE FILE_PATH="coverage/data_structures_studies$o_of_n_example.coverage" NAME="o_of_n_example Coverage Results" MODIFIED="1676033395035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/big_o" />
     <SUITE FILE_PATH="coverage/data_structures_studies$_queue.coverage" NAME="queue Coverage Results" MODIFIED="1691093675107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/queue" />
     <SUITE FILE_PATH="coverage/data_structures_studies$scratch_91.coverage" NAME="scratch_91 Coverage Results" MODIFIED="1696968383967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/data_structures_studies$binary_search_tree.coverage" NAME="binary_search_tree Coverage Results" MODIFIED="1697563463667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/trees" />
+    <SUITE FILE_PATH="coverage/data_structures_studies$binary_search_tree.coverage" NAME="binary_search_tree Coverage Results" MODIFIED="1697563877771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/trees" />
     <SUITE FILE_PATH="coverage/data_structures_studies$queue.coverage" NAME="queue Coverage Results" MODIFIED="1691094109317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/queue" />
     <SUITE FILE_PATH="coverage/data_structures_studies$class.coverage" NAME="class Coverage Results" MODIFIED="1676420467360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/classes_and_pointers" />
     <SUITE FILE_PATH="coverage/data_structures_studies$o_of_lists_example.coverage" NAME="o_of_lists_example Coverage Results" MODIFIED="1676417957645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/big_o" />
     <SUITE FILE_PATH="coverage/data_structures_studies$recursive_binary_search_tree.coverage" NAME="recursive_binary_search_tree Coverage Results" MODIFIED="1697558743081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/trees" />
+    <SUITE FILE_PATH="coverage/data_structures_studies$bubble_sort.coverage" NAME="bubble_sort Coverage Results" MODIFIED="1697565546787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/sorting_algorithms" />
     <SUITE FILE_PATH="coverage/data_structures_studies$leet_code_tests.coverage" NAME="leet_code_tests Coverage Results" MODIFIED="1697047380044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/heap" />
+    <SUITE FILE_PATH="coverage/data_structures_studies$selection_sort.coverage" NAME="selection_sort Coverage Results" MODIFIED="1697567795642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/sorting_algorithms" />
     <SUITE FILE_PATH="coverage/data_structures_studies$graph.coverage" NAME="graph Coverage Results" MODIFIED="1696990599124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_examples/graph" />
   </component>
 </project>

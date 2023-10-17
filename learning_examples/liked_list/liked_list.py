@@ -1,7 +1,7 @@
 class Node:
-    def __init__(self, value):
-        self.value = value
-        self.next = None
+    def __init__(self, value: int):
+        self.value: int = value
+        self.next: Node | None = None
 
     def __repr__(self):
         return f"Node<value: {self.value}>"
@@ -164,7 +164,7 @@ class LinkedList:
             after = current_node.next
 
             # Here we store the value of before flipping the pointer
-            # Pointer to the before value of the current in the item instead of the next
+            # to the before value of the current in the item instead of the next
             current_node.next = before
 
             # Here we walk ahead on the list to continue iterating
@@ -176,6 +176,7 @@ class LinkedList:
     def print_list(self) -> None:
         """Prints the list information, created for debugging purposes"""
         node = self.head
+        values = []
 
         if self.length == 0:
             return None
@@ -183,6 +184,7 @@ class LinkedList:
         item_index = 0
         print("=-=" * 10)
         while node is not None:
+            values.append(node.value)
             print(f"Index {item_index}: {node.value}")
             node = node.next
             item_index += 1
@@ -192,6 +194,8 @@ class LinkedList:
         print("Tail: ", self.tail.value)
         print("Length: ", self.length)
         print("=-=" * 10)
+
+        return values
 
     def find_middle_by_length(self):
         index = self.length // 2
@@ -209,8 +213,37 @@ class LinkedList:
 
         return slow
 
+    def bubble_sort(self):
+        if self.length < 2:
+            return None
+
+        sorted_until = None
+
+        # If it reaches the 2nd node on the list it means it's already sorted
+        # Cause head and tail are already swapped with their respective values
+        while sorted_until != self.head.next:
+            current = self.head
+
+            # Always cutting the iterations by 1
+            # Assuming that the last node iterated is sorted
+            while current.next != sorted_until:
+                n1 = current.next
+
+                if current.value > n1.value:
+                    current.value, n1.value = n1.value, current.value
+
+                current = current.next
+
+            # Setting the record of the last node of the previous iteration
+            sorted_until = current
+
 
 if __name__ == "__main__":
-    my_linked_list = LinkedList(1)
+    my_linked_list = LinkedList(4)
     my_linked_list.append(2)
+    my_linked_list.append(6)
+    my_linked_list.append(5)
+    my_linked_list.append(1)
     my_linked_list.append(3)
+    my_linked_list.bubble_sort()
+    my_linked_list.print_list()
