@@ -29,3 +29,13 @@
   node from the tree, but just if it's a leaf node, if it's a parent node we have to put up the leaf that node was holding,
   and it gets more complicated when the leaf are holding two subtrees, then we have to go the right one and find the lower
   value that we can copy tho the node we are trying to drop and complete the tree again by dropping the lower value at the end.
+
+# Tree Traversal
+- Visit every node in the tree and put all the values of the tree in a list
+- It's a complex method cause the tree is not linear like a list so there are several ways to do this
+- Breadth First Search that gets row by row of the tree. Returns the list in the same order as the tree was created
+- Depth First Search that gets the values from left to right
+  - The traverse function is always the same, what's going to change is the moment the current node is added to the list 
+  - Pre Order: Traverses the tree add the node value to the list then add the left one then the right one.
+  - Post Order: Traverses the tree add the left node then add right one then the nodes value
+  - In Order: Traverses the tree add the left node then the nodes value then the right node

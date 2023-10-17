@@ -56,16 +56,104 @@ class BinarySearchTree:
 
         return False
 
+    def breadth_first_search(self):
+        queue = [self.root]
+        results = []
+
+        while queue:
+            node = queue.pop(0)
+            results.append(node.value)
+
+            if node.left:
+                queue.append(node.left)
+
+            if node.right:
+                queue.append(node.right)
+
+        return results
+
+    def depth_first_search_pre_order(self):
+        results = []
+
+        def traverse(current_node):
+            results.append(current_node.value)
+
+            if current_node.left:
+                traverse(current_node.left)
+
+            if current_node.right:
+                traverse(current_node.right)
+
+        traverse(self.root)
+        return results
+
+    def depth_first_search_post_order(self):
+        results = []
+
+        def traverse(current_node):
+            if current_node.left:
+                traverse(current_node.left)
+
+            if current_node.right:
+                traverse(current_node.right)
+
+            results.append(current_node.value)
+
+        traverse(self.root)
+        return results
+
+    def depth_first_search_in_order(self):
+        results = []
+
+        def traverse(current_node):
+            if current_node.left:
+                traverse(current_node.left)
+
+            results.append(current_node.value)
+
+            if current_node.right:
+                traverse(current_node.right)
+
+        traverse(self.root)
+        return results
+
+    def is_valid_bst(self):
+        nodes_values = self.depth_first_search_in_order()
+        for i in range(1, len(nodes_values)):
+            if nodes_values[i] <= nodes_values[i - 1]:
+                return False
+        return True
+
+    def kth_smallest(self, index: int):
+
+        stack = []
+        node = self.root
+
+        while stack or node:
+            while node:
+                stack.append(node)
+                node = node.left
+
+            node = stack.pop()
+
+            index -= 1
+            if index == 0:
+                return node.value
+
+            node = node.right
+
 
 if __name__ == "__main__":
-    tree = BinarySearchTree()
-    tree.insert(69)
-    tree.insert(420)
-    tree.insert(9)
-    tree.insert(18)
-    tree.insert(596)
-    tree.insert(18)
-    tree.insert(130)
+    bst = BinarySearchTree()
 
-    print(tree.contains(18))
-    print(tree)
+    bst.insert(5)
+    bst.insert(3)
+    bst.insert(7)
+    bst.insert(2)
+    bst.insert(4)
+    bst.insert(6)
+    bst.insert(8)
+
+    print(bst.kth_smallest(1))  # Expected output: 2
+    print(bst.kth_smallest(3))  # Expected output: 4
+    print(bst.kth_smallest(6))  # Expected output: 7
