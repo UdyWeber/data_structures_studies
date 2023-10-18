@@ -238,7 +238,109 @@ class LinkedList:
             sorted_until = current
 
     def selection_sort(self):
-        ...
+        if self.length < 2:
+            return None
+
+        current = self.head
+
+        while current.next is not None:
+            min_node = current
+            temp = current.next
+
+            while temp is not None:
+                if temp.value < min_node.value:
+                    min_node = temp
+
+                temp = temp.next
+
+            if current != min_node:
+                current.value, min_node.value = min_node.value, current.value
+
+            current = current.next
+
+    # Not Implemented by myself :(
+    def insertion_sort(self):
+        # Check if the length of the list is less than 2
+        if self.length < 2:
+            return
+
+        # Set the pointer to the first element of the sorted list
+        sorted_list_head = self.head
+
+        # Set the pointer to the second element of the list
+        unsorted_list_head = self.head.next
+
+        # Remove the first element from the sorted list
+        sorted_list_head.next = None
+
+        # Iterate through the unsorted list
+        while unsorted_list_head is not None:
+            # Save the current element
+            current = unsorted_list_head
+
+            # Move the pointer to the next element in the unsorted list
+            unsorted_list_head = unsorted_list_head.next
+
+            # Insert the current element into the sorted list
+            if current.value < sorted_list_head.value:
+                # If the current element is smaller than the first element
+                # in the sorted list, it becomes the new first element
+                current.next = sorted_list_head
+                sorted_list_head = current
+            else:
+                # Otherwise, search for the appropriate position to insert the current element
+                search_pointer = sorted_list_head
+
+                while search_pointer.next is not None and current.value > search_pointer.next.value:
+                    search_pointer = search_pointer.next
+
+                current.next = search_pointer.next
+                search_pointer.next = current
+
+        # Update the head and tail of the list
+        self.head = sorted_list_head
+        temp = self.head
+
+        while temp.next is not None:
+            temp = temp.next
+
+        self.tail = temp
+
+    def merge(self, other_list: 'LinkedList'):
+        if self.length == 0 or other_list.length == 0:
+            return None
+
+        dummy = Node(0)
+        current = dummy
+
+        my_list_node = self.head
+        other_list_node = other_list.head
+
+        while my_list_node is not None and other_list_node is not None:
+            if my_list_node.value < other_list_node.value:
+                current.next = my_list_node
+                my_list_node = my_list_node.next
+            else:
+                current.next = other_list_node
+                other_list_node = other_list_node.next
+
+            current = current.next
+
+        if my_list_node is not None:
+            current.next = my_list_node
+
+        if other_list_node is not None:
+            current.next = other_list_node
+
+        self.head = dummy.next
+
+        temp = self.head
+
+        while temp.next is not None:
+            temp = temp.next
+
+        self.tail = temp
+        self.length += other_list.length
 
 
 if __name__ == "__main__":
@@ -248,5 +350,16 @@ if __name__ == "__main__":
     my_linked_list.append(5)
     my_linked_list.append(1)
     my_linked_list.append(3)
-    my_linked_list.bubble_sort()
+    # my_linked_list.bubble_sort()
+    # my_linked_list.selection_sort()
+    my_linked_list.insertion_sort()
+    my_linked_list.print_list()
+
+    my_linked_list_two = LinkedList(8)
+    my_linked_list_two.append(12)
+    my_linked_list_two.append(420)
+    my_linked_list_two.append(69)
+
+    my_linked_list.merge(my_linked_list_two)
+
     my_linked_list.print_list()
