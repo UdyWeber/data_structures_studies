@@ -237,6 +237,9 @@ class LinkedList:
             # Setting the record of the last node of the previous iteration
             sorted_until = current
 
+    def selection_sort(self):
+        ...
+
 
 if __name__ == "__main__":
     my_linked_list = LinkedList(4)
