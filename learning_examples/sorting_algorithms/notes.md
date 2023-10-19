@@ -34,3 +34,9 @@
     - Merging them together: O(n) because we have to iterate over all the elements and sort them into a new list
   - So the final big O for merge sort would be O(n log n) which is way more efficient than the previous ones, that were
     O(n^2)
+
+# Quick Sort
+  ## Big O
+  - The pivot function will be O(n) because we have to iterate over the entire list
+  - The quick sort algorithm is O(n log n) only in the best case scenario in the average case it would end up as O(n^2) 
+    when we already have sorted data 

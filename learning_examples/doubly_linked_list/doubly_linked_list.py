@@ -174,6 +174,22 @@ class DoublyLinkedList:
         # You have to set head as tail cause tail.next is not None, and it points to the inverted Path list
         self.tail, self.head = self.head, self.tail
 
+    def is_palindrome(self):
+        if self.length <= 1:
+            return True
+
+        forward_node = self.head
+        backward_node = self.tail
+
+        for i in range(self.length // 2):
+            if forward_node.value != backward_node.value:
+                return False
+
+            forward_node = forward_node.next
+            backward_node = backward_node.prev
+
+        return True
+
     def print_list(self) -> None:
         """Prints the list information, created for debugging purposes"""
         node = self.head

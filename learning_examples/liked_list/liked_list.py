@@ -176,7 +176,6 @@ class LinkedList:
     def print_list(self) -> None:
         """Prints the list information, created for debugging purposes"""
         node = self.head
-        values = []
 
         if self.length == 0:
             return None
@@ -184,7 +183,6 @@ class LinkedList:
         item_index = 0
         print("=-=" * 10)
         while node is not None:
-            values.append(node.value)
             print(f"Index {item_index}: {node.value}")
             node = node.next
             item_index += 1
@@ -194,8 +192,6 @@ class LinkedList:
         print("Tail: ", self.tail.value)
         print("Length: ", self.length)
         print("=-=" * 10)
-
-        return values
 
     def find_middle_by_length(self):
         index = self.length // 2
@@ -212,6 +208,18 @@ class LinkedList:
             slow = slow.next
 
         return slow
+
+    def has_loop(self):
+        fast = slow = self.head
+
+        while fast is not None and fast.next is not None:
+            fast = fast.next.next
+            slow = slow.next
+
+            if fast == slow:
+                return True
+
+        return False
 
     def bubble_sort(self):
         if self.length < 2:
@@ -342,6 +350,124 @@ class LinkedList:
         self.tail = temp
         self.length += other_list.length
 
+    def partition_list(self, x):
+        if not self.head:
+            return None
+
+        # Create two dummy instances
+        dummy1 = Node(0)
+        dummy2 = Node(0)
+
+        # Create pointers to the dummys
+        prev1 = dummy1
+        prev2 = dummy2
+
+        # Uses the current to run the list and make comparisons
+        current = self.head
+
+        while current:
+            if current.value < x:
+                prev1.next = current
+                prev1 = current
+            else:
+                prev2.next = current
+                prev2 = current
+            current = current.next
+
+        prev1.next = None
+        prev2.next = None
+
+        # Places the smaller dummy in front of the greatest
+        prev1.next = dummy2.next
+        self.head = dummy1.next
+
+    def remove_duplicates(self):
+        values = set()
+
+        # Keep track of previous node to be able to override the current in the list iteration
+        previous = None
+        current = self.head
+
+        while current:
+            if current.value in values:
+                # If value is already on the set override the pointer on previous to current and point forward
+                previous.next = current.next
+                self.length -= 1
+            else:
+                values.add(current.value)
+                previous = current
+            current = current.next
+
+    def binary_to_decimal(self):
+        if self.length == 0:
+            return 0
+
+        binary_string = ""
+
+        current = self.head
+
+        while current is not None:
+            binary_string += str(current.value)
+            current = current.next
+
+        return int(binary_string, 2)
+
+    def reverse_between(self, start_index, end_index):
+        if self.length <= 1:
+            return
+
+        # Create a dummy node to simplify head operations.
+        dummy_node = Node(0)
+        dummy_node.next = self.head
+
+        # Init 'previous_node', pointing just before reverse starts.
+        previous_node = dummy_node
+
+        # Move 'previous_node' to its position.
+        # It'll be at index 'start_index - 1' after this loop.
+        for i in range(start_index):
+            previous_node = previous_node.next
+
+        # Init 'current_node' at 'start_index', start of reversal.
+        current_node = previous_node.next
+
+        # Loop reverses nodes between 'start_index' and 'end_index'.
+        for i in range(end_index - start_index):
+            # 'node_to_move' is next node we want to reverse.
+            node_to_move = current_node.next
+
+            # Disconnect 'node_to_move', point 'current_node' after it.
+            current_node.next = node_to_move.next
+
+            # Insert 'node_to_move' at new position after 'previous_node'.
+            node_to_move.next = previous_node.next
+
+            # Link 'previous_node' to 'node_to_move'.
+            previous_node.next = node_to_move
+
+        # Update list head if 'start_index' was 0.
+        self.head = dummy_node.next
+
+
+def find_kth_from_end(linked_list: LinkedList, k: int) -> Node | None:
+    before = None
+
+    for i in range(k):
+        current = linked_list.head
+
+        if current is None:
+            return None
+
+        while current is not None and current.next != before:
+            current = current.next
+
+        before = current
+
+        if current is None:
+            break
+
+    return before
+
 
 if __name__ == "__main__":
     my_linked_list = LinkedList(4)
@@ -361,5 +487,6 @@ if __name__ == "__main__":
     my_linked_list_two.append(69)
 
     my_linked_list.merge(my_linked_list_two)
+    find_kth_from_end(my_linked_list, 20)
 
     my_linked_list.print_list()
